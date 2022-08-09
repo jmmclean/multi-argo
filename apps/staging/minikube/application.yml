@@ -1,18 +1,18 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: argo-cd
-  namespace: argo-cd-prod
+  name: minikube-apps
+  namespace: argo-cd-staging
 spec:
   project: default
   source:
     repoURL: https://github.com/jmmclean/multi-argo.git
     targetRevision: main
-    path: argo-cd/prod/minikube
+    path: apps/staging/minikube
   destination:
-    server: https://kubernetes.default.svc
-    namespace: argo-cd-prod
+    name: in-cluster
+    namespace: argo-cd-staging
   syncPolicy:
     automated:
-      prune: true
+      prune: false
       selfHeal: true

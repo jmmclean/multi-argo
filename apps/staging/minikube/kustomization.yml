@@ -1,0 +1,2 @@
+resources:
+- ../../../argo-cd/staging/minikube/application.yml   # Argo CD
