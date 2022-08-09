@@ -7,7 +7,7 @@ spec:
   project: default
   source:
     repoURL: https://github.com/jmmclean/multi-argo.git
-    targetRevision: main
+    targetRevision: break-it
     path: apps/ops/minikube
   destination:
     name: in-cluster
