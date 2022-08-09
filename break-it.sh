@@ -4,4 +4,6 @@ if [ "minikube" != "$(kubectl config current-context)" ]; then
     exit 1
 fi
 
-kubectl patch application minikube-apps -n argo-cd-ops --patch '{"spec": {"source": {"targetRevision": "break-it"}}}'
+git checkout break-it
+kubectl apply -f apps/ops/minikube/application.yml
+git checkout main
