@@ -19,6 +19,9 @@ kustomize build --load-restrictor LoadRestrictionsNone --enable-helm argo-cd/sta
 kustomize build --load-restrictor LoadRestrictionsNone --enable-helm argo-cd/prod/minikube | kubectl apply -f -
 kustomize build --load-restrictor LoadRestrictionsNone --enable-helm argo-cd/ops/minikube | kubectl apply -f -
 
+# Apply Clust RBAC
+kustomize build --load-restrictor LoadRestrictionsNone --enable-helm argo-cd-cluster-rbac | kubectl apply -f -
+
 # Apply App of Apps
 kubectl apply -f apps/dev/minikube/application.yml
 kubectl apply -f apps/staging/minikube/application.yml

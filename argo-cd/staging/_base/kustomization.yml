@@ -3,4 +3,7 @@ resources:
 - secret/cluster-default.yml
 - secret/repo-multi-argo.yml
 
+patchesStrategicMerge:
+- patch/cm-argocd-cm.yml
+
 namespace: argo-cd-staging
