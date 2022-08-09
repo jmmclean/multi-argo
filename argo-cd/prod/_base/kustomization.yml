@@ -1,0 +1,6 @@
+resources:
+- github.com/argoproj/argo-cd//manifests/ha/base?ref=v2.4.8
+- secret/cluster-default.yml
+- secret/repo-multi-argo.yml
+
+namespace: argo-cd-prod
