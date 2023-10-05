@@ -2,6 +2,7 @@ resources:
 - github.com/argoproj/argo-cd//manifests/base?ref=v2.8.1
 - secret/cluster-default.yml
 - secret/repo-multi-argo.yml
+- secret/change.yml
 
 patchesStrategicMerge:
 - patch/cm-argocd-cm.yml
