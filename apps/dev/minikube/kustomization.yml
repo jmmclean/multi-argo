@@ -1,2 +1,3 @@
 resources:
 - ../../../argo-cd/dev/minikube/application.yml   # Argo CD
+- ../../../bg-ingress-test/dev/minikube/application.yml   # bg-ingress-test

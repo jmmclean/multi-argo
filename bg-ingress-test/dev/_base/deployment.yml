@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bg-ingress-test-server
+spec:
+  selector:
+    matchLabels:
+      app: bg-ingress-test-server
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: bg-ingress-test-server
+    spec:
+      containers:
+      - name: bg-ingress-test-server
+        image: argoproj/rollouts-demo:blue
+        imagePullPolicy: Always
+        ports:
+          - containerPort: 8080
+            name: http
+            protocol: TCP
+        resources:
+          requests:
+            cpu: 50m
+            memory: 300Mi
+          limits:
+            memory: 500Mi
+            cpu: 1

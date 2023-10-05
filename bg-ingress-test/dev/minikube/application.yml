@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: bg-ingress-test
+  namespace: argo-cd-dev
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/jmmclean/multi-argo.git
+    targetRevision: upgrade-crd-26x-28x
+    path: bg-ingress-test/dev/minikube
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: testing-dev
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - CreateNamespace=true

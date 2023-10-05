@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: bg-ingress-test
+  labels:
+    app: bg-ingress-test-server
+spec:
+  ports:
+  - port: 80
+    targetPort: 8080
+    name: http-default
+  - port: 8080
+    name: http
+  selector:
+    app: bg-ingress-test-server
