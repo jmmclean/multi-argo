@@ -1,2 +1,2 @@
 resources:
-  - github.com/argoproj/argo-cd//manifests/crds?ref=v2.4.8
+  - github.com/argoproj/argo-cd//manifests/crds?ref=v2.6.3

@@ -1,5 +1,5 @@
 resources:
-  - github.com/argoproj/argo-cd//manifests/cluster-rbac?ref=v2.4.8
+  - github.com/argoproj/argo-cd//manifests/cluster-rbac?ref=v2.6.3
 
 patchesStrategicMerge:
   - ./patch/crb-subject-namespace.yml

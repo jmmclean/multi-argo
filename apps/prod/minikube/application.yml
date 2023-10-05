@@ -7,7 +7,7 @@ spec:
   project: default
   source:
     repoURL: https://github.com/jmmclean/multi-argo.git
-    targetRevision: main
+    targetRevision: upgrade-crd-26x-28x
     path: apps/prod/minikube
   destination:
     name: in-cluster
